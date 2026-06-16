@@ -31,6 +31,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="styles.css?v=20260615-1">
 <style id="page-fixes">
+  :root{
+    --blue:#31597f !important;
+    --blue-dark:#213b56 !important;
+    --blue-soft:#eaf1f7 !important;
+    --blue-line:#d3deea !important;
+    --green:#5f7893 !important;
+    --green-dark:#38516d !important;
+    --green-2:#718aa4 !important;
+    --green-soft:#dce6f0 !important;
+    --green-wash:#eef3f8 !important;
+    --green-tint:#dde7f0 !important;
+    --green-line:#c5d3e0 !important;
+    --accent:#7f96ad !important;
+    --accent-dark:#627a92 !important;
+    --accent-soft:#edf2f6 !important;
+    --offwhite:#f5f7fa !important;
+    --grey-100:#d8e0e8 !important;
+    --ink:#27384a !important;
+    --ink-60:#5d6d7f !important;
+    --ink-40:#7d8b99 !important;
+    --blue-wash:#f1f5f9 !important;
+  }
+  body{
+    background:
+      radial-gradient(1200px 560px at 100% 0%, rgba(97,120,147,.08), transparent 52%),
+      radial-gradient(860px 420px at 0% 18%, rgba(49,89,127,.08), transparent 48%),
+      radial-gradient(760px 360px at 50% 100%, rgba(33,59,86,.06), transparent 58%),
+      var(--white) !important;
+  }
   a.btn[href*="wa.me"],
   a.btn[href*="wa.me"]:visited,
   a.btn[href*="wa.me"]:hover,
@@ -83,13 +112,124 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero::before{
     background:
       linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.93) 30%, rgba(255,255,255,.74) 50%, rgba(255,255,255,.2) 72%),
-      radial-gradient(120% 80% at 92% -8%, rgba(233,240,251,.92) 0%, transparent 46%),
-      radial-gradient(55% 60% at 0% 100%, rgba(0,153,106,.08) 0%, transparent 55%),
+      radial-gradient(120% 80% at 92% -8%, rgba(228,236,245,.94) 0%, transparent 46%),
+      radial-gradient(55% 60% at 0% 100%, rgba(49,89,127,.08) 0%, transparent 55%),
       url("assets/hero_ortodontia.webp") no-repeat center center/cover !important;
   }
   .darkblock{
     background:
       url("assets/call_ortodontia.webp") no-repeat right center/cover fixed !important;
+  }
+  .darkblock::before{
+    background:
+      linear-gradient(100deg, rgba(33,59,86,.95) 0%, rgba(49,89,127,.92) 34%, rgba(76,123,167,.72) 72%, rgba(111,135,162,.46) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.22)) !important;
+  }
+  .section--tint{
+    background:
+      radial-gradient(520px 220px at 100% 0%, rgba(127,150,173,.12), transparent 62%),
+      radial-gradient(620px 280px at 0% 100%, rgba(49,89,127,.08), transparent 60%),
+      var(--offwhite) !important;
+  }
+  .section--faq{
+    background:
+      radial-gradient(460px 240px at 100% 8%, rgba(95,120,147,.12), transparent 58%),
+      radial-gradient(420px 180px at 0% 100%, rgba(127,150,173,.1), transparent 60%),
+      linear-gradient(180deg, #fff 0%, #f7f9fb 100%) !important;
+  }
+  #tratamento,
+  .section--reviews,
+  .finalcta{
+    background:linear-gradient(135deg, #213b56 0%, #31597f 52%, #6f87a2 100%) !important;
+  }
+  #diferenciais{
+    background:
+      radial-gradient(420px 180px at 100% 0%, rgba(127,150,173,.14), transparent 58%),
+      radial-gradient(520px 260px at 0% 100%, rgba(49,89,127,.1), transparent 60%),
+      linear-gradient(180deg, #f8fbfd 0%, #f2f6f9 100%) !important;
+  }
+  #estrutura{
+    background:
+      radial-gradient(420px 180px at 100% 0%, rgba(127,150,173,.1), transparent 58%),
+      linear-gradient(180deg, #fff 0%, #f8fafc 100%) !important;
+  }
+  #profissionais{
+    background:
+      radial-gradient(560px 240px at 0% 0%, rgba(49,89,127,.12), transparent 58%),
+      radial-gradient(420px 220px at 100% 100%, rgba(95,120,147,.1), transparent 60%),
+      linear-gradient(180deg, #f6f9fc 0%, #eef3f8 100%) !important;
+  }
+  #tratamentos-relacionados{
+    background:
+      radial-gradient(360px 180px at 100% 0%, rgba(127,150,173,.12), transparent 55%),
+      linear-gradient(180deg, #fff 0%, #f6f9fc 100%) !important;
+  }
+  #localizacao{
+    background:
+      radial-gradient(460px 220px at 0% 100%, rgba(49,89,127,.1), transparent 58%),
+      radial-gradient(360px 160px at 100% 0%, rgba(127,150,173,.1), transparent 55%),
+      linear-gradient(180deg, #f6f9fb 0%, #fff 100%) !important;
+  }
+  .feat-card:nth-child(3n) .ico,
+  .treat-card:nth-child(3n) .ico{
+    background:linear-gradient(150deg, var(--accent), var(--accent-dark)) !important;
+    color:#fff !important;
+    box-shadow:0 12px 24px -12px rgba(98,122,146,.38) !important;
+  }
+  .pain-card .ico,
+  .feat-card .ico,
+  .treat-card .ico,
+  .treat-card__note-icon,
+  .loc-list .ico,
+  .faq-q .qmark{
+    background:var(--blue) !important;
+    color:#fff !important;
+    box-shadow:0 12px 24px -12px rgba(49,89,127,.38) !important;
+  }
+  .pain-card .ico svg,
+  .feat-card .ico svg,
+  .treat-card .ico svg,
+  .treat-card__note-icon svg,
+  .loc-list .ico svg,
+  .faq-q .qmark svg{
+    color:#fff !important;
+    fill:none;
+    stroke:currentColor;
+  }
+  .pain-card .ico--blue-star svg{
+    fill:#fff !important;
+    stroke:none !important;
+  }
+  .feat-card:nth-child(2n) .ico,
+  .feat-card:nth-child(3n) .ico,
+  .treat-card:nth-child(2n) .ico,
+  .treat-card:nth-child(3n) .ico,
+  .faq-item.is-open .qmark{
+    background:var(--blue) !important;
+    color:#fff !important;
+    box-shadow:0 12px 24px -12px rgba(49,89,127,.38) !important;
+  }
+  .review-card .stars,
+  .footer__col li svg,
+  .finalcta__info svg{
+    color:var(--accent) !important;
+  }
+  .footer{
+    background:
+      radial-gradient(280px 180px at 12% 0%, rgba(111,135,162,.14), transparent 65%),
+      radial-gradient(340px 220px at 100% 100%, rgba(49,89,127,.18), transparent 70%),
+      linear-gradient(180deg, #21314a 0%, #1a2740 100%) !important;
+  }
+  .title em,
+  h2 em,
+  .darkblock h2 em,
+  .finalcta h2 em{
+    color:inherit !important;
+    font-style:normal !important;
+  }
+  .faq-q .qmark,
+  .faq-item.is-open .qmark{
+    color:#fff !important;
   }
   @media (max-width:640px){
     .hero__cta{
@@ -121,7 +261,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero::before{
       background:
         linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 42%, rgba(255,255,255,.84) 62%, rgba(255,255,255,.5) 100%),
-        radial-gradient(120% 80% at 92% -8%, rgba(233,240,251,.82) 0%, transparent 46%),
+        radial-gradient(120% 80% at 92% -8%, rgba(228,236,245,.84) 0%, transparent 46%),
         url("assets/hero_ortodontia.webp") no-repeat calc(50% - 120px) center/cover !important;
     }
     .darkblock{
